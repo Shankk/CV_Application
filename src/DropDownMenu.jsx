@@ -10,7 +10,7 @@ function DropDownMenu(props) {
     return (
         <>
             <button id={props.identity} onClick={handleDrop}>{props.text}</button>
-            <div className={(props.identity + "Items ") + dropState} id='dropDown'>
+            <div className={ "dropDown " + dropState} id={(props.identity + "Items")}>
                 {props.children}
             </div>
         </>

@@ -1,0 +1,66 @@
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.edits {
+    min-width: 200px;
+    width: 400px;
+    height: auto;
+    gap: 5px;
+    padding: 1em;
+    margin: 50px 20px;
+    background-color: gainsboro;
+    border-radius: 12px;
+    box-shadow: 0px 0px 16px 0px grey;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#personalItems , #educationItems, #experienceItems {
+    display: flex;
+    padding: 0px;
+}
+
+#personalItems.toggled {
+    max-height: 500px;
+}
+
+#personal, #education, #experience {
+    all: unset;
+    min-width: 100px;
+    min-height: 30px;
+    padding: 0.5em;
+
+    border-radius: 8px;
+    background-color: white;
+    flex: auto;
+}
+
+.content {
+    min-width: 200px;
+    width: 1000px;
+    height: 80%;
+    gap: 5px;
+    padding: 1em;
+    margin: 50px 20px;
+    background-color: gainsboro;
+    border-radius: 12px;
+    box-shadow: 0px 0px 16px 0px grey;
+    
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+
+p {
+    all: unset;
+}

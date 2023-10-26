@@ -1,15 +1,15 @@
 .sideMenu {
-    min-width: 100px;
+    min-width: 150px;
     height: 100vh;
 
     background-color: grey;
-    padding: 20px;
+    padding: 0px 20px;
     gap:10px;
     display: flex;
     flex-flow: column nowrap;
 }
 
-#dropDown {
+.dropDown {
     width: 100%;
     max-height: 0px;
     visibility: hidden;
@@ -23,7 +23,7 @@
     transition: ease 0.5s;
 }
 
-#dropDown.toggled {
+.toggled {
     visibility: visible;
     max-height: 300px;
     height: auto;
