@@ -30,7 +30,7 @@
     padding: 0px;
 }
 
-#personalItems.toggled {
+#personalItems.toggled , #educationItems.toggled {
     max-height: 500px;
 }
 
@@ -45,6 +45,7 @@
     flex: auto;
 }
 
+
 .content {
     min-width: 200px;
     width: 1000px;
@@ -58,8 +59,37 @@
     
     display: flex;
     flex-flow: column nowrap;
+    overflow-y: scroll;
 }
 
+.personalContent {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.educationContent {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.educationContentItem {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contentItemGroup {
+    display: flex;
+    flex-flow: column;
+
+}
 
 p {
     all: unset;
