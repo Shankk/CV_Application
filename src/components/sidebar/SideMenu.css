@@ -1,8 +1,8 @@
 .sideMenu {
-    min-width: 150px;
+    min-width: 200px;
     height: 100vh;
 
-    background-color: grey;
+    background-color: gainsboro;
     padding: 0px 20px;
     gap:10px;
     display: flex;
@@ -33,4 +33,18 @@ button {
     all: unset;
     text-align: center;
     
+    min-width: 150px;
+    min-height: 40px;
+    width: 80%;
+    height: auto;
+    background-color: white;
+    border-radius: 8px;
+    transition: ease-in-out 0.1s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+button:active {
+    transform: scale(0.95);
 }

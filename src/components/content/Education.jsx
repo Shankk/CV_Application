@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
 
-function Education({school = "George Brown",degree = "Game Programing",
-    start = "08/2018", end = "04/2021", location = "Toronto ON"}) {
+function Education({school = "",degree = "",
+    start = "", end = "", location = ""}) {
 
     const educationStyle = {
         color: "red",
@@ -12,11 +12,11 @@ function Education({school = "George Brown",degree = "Game Programing",
     return (
         <div className="educationContentItem">
             <div className="contentItemGroup">
-                <p>{start} {end} </p>
+                <p>{start} - {end} </p>
                 <p>{location}</p>
             </div>
             <div className="contentItemGroup">
-                <h3>{school}</h3>
+                <p>{school}</p>
                 <p>{degree}</p>
             </div>
         </div>
@@ -26,25 +26,25 @@ function Education({school = "George Brown",degree = "Game Programing",
 function EducationList(props) {
     if(!props.educationList) {
         return (
-            <>
-                <h2>Education</h2>
+            <div className="educationContent">
+                <h3 className="contentSection">Education</h3>
                 <p>Trying to fetch Education...</p>
-            </>
+            </div>
         )
     }
 
     if(props.educationList.length === 0) {
         return (
-            <>
-                <h2>Education</h2>
+            <div className="educationContent">
+                <h3 className="contentSection">Education</h3>
                 <p>No Education has been added. It is reccomended to add some!</p>
-            </>
+            </div>
         )
     }
 
     return (
         <div className="educationContent">
-            <h2>Education</h2>
+            <h3 className="contentSection">Education</h3>
             {props.educationList.map((education,i) => {
                 return <Education key={i} school={education.school} degree={education.degree} 
                 start={education.start} end={education.end} location={education.location} />;
